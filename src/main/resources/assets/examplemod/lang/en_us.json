@@ -1,5 +1,17 @@
 {
-  "itemGroup.examplemod": "Example Mod Tab",
+  "itemGroup.examplemod_tab": "Example Mod Stuffs",
+
+  "block.examplemod.adamantite_ore": "Adamantite Ore",
+  "block.examplemod.deepslate_adamantite_ore": "Deepslate Adamantite Ore",
+  "block.examplemod.trophilite_ore": "Trophilite Ore",
+  "block.examplemod.deepslate_trophilite_ore": "Deepslate Trophilite Ore",
+  "block.examplemod.xarium_ore": "Xarium Ore",
+  "block.examplemod.deepslate_xarium_ore": "Deepslate Xarium Ore",
+
+  "item.examplemod.adamantite": "Adamantite",
+  "item.examplemod.trophilite": "Trophilite",
+  "item.examplemod.xarium": "Xarium",
+
   "block.examplemod.example_block": "Example Block",
   "item.examplemod.example_item": "Example Item"
 }
