@@ -1,0 +1,47 @@
+package com.example.examplemod.entity;
+
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+
+public class CaveCrawlerEntity extends Zombie {
+
+    public CaveCrawlerEntity(EntityType<? extends Zombie> entityType, Level level) {
+        super(entityType, level);
+    }
+
+    @Override
+    protected void registerGoals() {
+        // It's generally a good idea to call super.registerGoals()
+        // However, Zombie.registerGoals() adds ZombieAttackGoal and ZombieAttackTurtleEggGoal.
+        // If we want a truly basic zombie that only walks and attacks, we might skip super
+        // and add goals manually. For now, let's add common goals.
+        // super.registerGoals(); // We will add goals manually to ensure we know what's there.
+
+        this.goalSelector.addGoal(0, new FloatGoal(this)); // Swim and float
+        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.0D, false)); // Attack players
+        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D)); // Wander
+        this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F)); // Look at player
+        this.goalSelector.addGoal(6, new RandomLookAroundGoal(this)); // Look around randomly
+
+        this.targetSelector.addGoal(1, new HurtByTargetGoal(this)); // Target whatever hurt it
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true)); // Target nearest player
+    }
+
+    public static AttributeSupplier.Builder createAttributes() {
+        return Zombie.createAttributes()
+                .add(Attributes.MOVEMENT_SPEED, 0.18F) // Standard Zombie speed is 0.23F
+                .add(Attributes.MAX_HEALTH, 15.0D) // Slightly less health than a standard Zombie (20D)
+                .add(Attributes.ATTACK_DAMAGE, 2.0D); // Slightly less attack damage (3D)
+    }
+}
