@@ -1,0 +1,93 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Client",
+      "presentation": {
+        "group": "Mod Development - Block-game-Jules-test-kfrey",
+        "order": 0
+      },
+      "projectName": "Block-game-Jules-test-kfrey",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/build/moddev/clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/build/moddev/clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dexamplemod%%/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/bin/main"
+      ],
+      "cwd": "${workspaceFolder}/run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "ClientData",
+      "presentation": {
+        "group": "Mod Development - Block-game-Jules-test-kfrey",
+        "order": 1
+      },
+      "projectName": "Block-game-Jules-test-kfrey",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/build/moddev/clientDataRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/build/moddev/clientDataRunVmArgs.txt",
+        "-Dfml.modFolders\u003dexamplemod%%/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/bin/main"
+      ],
+      "cwd": "${workspaceFolder}/run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "GameTestServer",
+      "presentation": {
+        "group": "Mod Development - Block-game-Jules-test-kfrey",
+        "order": 2
+      },
+      "projectName": "Block-game-Jules-test-kfrey",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/build/moddev/gameTestServerRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/build/moddev/gameTestServerRunVmArgs.txt",
+        "-Dfml.modFolders\u003dexamplemod%%/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/bin/main"
+      ],
+      "cwd": "${workspaceFolder}/run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Server",
+      "presentation": {
+        "group": "Mod Development - Block-game-Jules-test-kfrey",
+        "order": 3
+      },
+      "projectName": "Block-game-Jules-test-kfrey",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/build/moddev/serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/build/moddev/serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dexamplemod%%/Users/keeganfreyhof/Documents/GitHub/Block-game-Jules-test-kfrey/bin/main"
+      ],
+      "cwd": "${workspaceFolder}/run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}
